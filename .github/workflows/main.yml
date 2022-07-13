@@ -52,7 +52,7 @@ jobs:
           ${{ runner.os }}-pnpm-store-
 
     - name: install dependencies and build
-      run: cd viewer && pnpm install && pnpm build
+      run: pnpm install && pnpm build
 
     - uses: tauri-apps/tauri-action@v0
       env:
