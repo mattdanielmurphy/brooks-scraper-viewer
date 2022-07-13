@@ -12,6 +12,11 @@ jobs:
         platform: [windows-latest]
 
     runs-on: ${{ matrix.platform }}
+
+    defaults:
+      run:
+        working-directory: viewer
+
     steps:
     - name: checkout
       uses: actions/checkout@v3
