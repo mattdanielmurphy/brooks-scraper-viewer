@@ -4,6 +4,10 @@ on:
     branches:
       - release
 
+defaults:
+      run:
+        working-directory: ./viewer
+
 jobs:
   publish-tauri:
     strategy:
@@ -12,12 +16,12 @@ jobs:
         platform: [windows-latest]
 
     runs-on: ${{ matrix.platform }}
-
-    defaults:
-      run:
-        working-directory: ./viewer
+    
 
     steps:
+    - name: print working dir
+      run: pwd
+
     - name: checkout
       uses: actions/checkout@v3
 
