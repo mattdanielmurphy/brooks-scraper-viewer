@@ -19,8 +19,8 @@ jobs:
 
     steps:
     - name: checkout
-      working-directory: .
       uses: actions/checkout@v3
+      working-directory: .
 
     - name: print working dir
       run: pwd
