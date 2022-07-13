@@ -62,6 +62,7 @@ jobs:
 
     - name: install app dependencies and build it
       run: pnpm install && pnpm build
+      working-directory: viewer
 
     - uses: tauri-apps/tauri-action@v0
       env:
